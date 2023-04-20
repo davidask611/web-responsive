@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos que se aplicarán en pantallas de 700 píxeles o menos */
+@media screen and (max-width: 700px) {
+  body {
+    background-image: url(imagenes/fondo\ de\ pantalla.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 16px;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+  .header {
+    grid-area: header;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centrar verticalmente */
+  }
+  .logo img {
+    border-radius: 50%;
+    width: 70px;
+  }
+  .header nav a {
+    text-decoration: none;
+    margin: 10px;
+    color: #8a2be2;
+  }
+  .header nav a:hover {
+    color: rgb(244, 7, 15);
+    font-size: large;
+  }
+  .main {
+    grid-area: main;
+    width: 100%;
+    height: auto;
+  }
+  .main h1 {
+    text-align: center;
+  }
+  .container {
+    width: 100%;
+    height: auto;
+  }
+  .container h2 {
+    text-align: center;
+  }
+  .slider {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    height: auto;
+    overflow: hidden;
+  }
+  .slider img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .slider-button {
+    display: flex;
+    justify-content: center;
+  }
+  .slider-button a {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  .footer {
+    grid-area: footer;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}
+
+/* Estilos que se aplicarán en pantallas de 800 píxeles o más */
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url(imagenes/fondo\ de\ pantalla.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+  .header {
+    grid-area: header;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo img {
+    border-radius: 50%;
+    width: 100px;
+  }
+  .header nav a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .header nav a:hover {
+    color: darkorange;
+    transition: 0.5s;
+    font-size: 22px;
+  }
+  .main {
+    grid-area: main;
+    width: 100%;
+    height: auto;
+  }
+  h1 {
+    text-align: center;
+    color: #8a2be2;
+    padding: 50px;
+  }
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  h2 {
+    text-align: center;
+    color: blue;
+  }
+  .slider {
+    margin: auto;
+    display: flex;
+    width: 30%;
+    height: auto;
+    overflow: hidden;
+  }
+  .slider img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .slider-button {
+    display: flex;
+    justify-content: center;
+  }
+  .slider-button a {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  .footer {
+    grid-area: footer;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}
